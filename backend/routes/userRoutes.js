@@ -5,15 +5,21 @@ import {
   createUser,
   loginUser,
   logoutCurrentUser,
+  //getAllUsers,
   getCurrentUserProfile,
   updateCurrentUserProfile,
 } from "../controllers/userController.js";
+
 // middlewares
-import { authenticate } from "../middlewares/authMiddleware.js";
+import { authenticate, authorizeAdmin } from "../middlewares/authMiddleware.js";
 
 const router = express.Router();
 
-router.post("/", createUser);
+router
+  .route("/")
+  .post(createUser)
+  .get(authenticate, authorizeAdmin, getAllUsers);
+
 router.post("/auth", loginUser);
 router.post("/logout", logoutCurrentUser);
 
