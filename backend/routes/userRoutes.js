@@ -5,7 +5,7 @@ import {
   createUser,
   loginUser,
   logoutCurrentUser,
-  //getAllUsers,
+  getAllUsers,
   getCurrentUserProfile,
   updateCurrentUserProfile,
 } from "../controllers/userController.js";
