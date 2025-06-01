@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* // Can use unsplash to use free photos in projects */
+
 .custom {
   @media (width <= 40rem /* 640px */) {
     display: none;
