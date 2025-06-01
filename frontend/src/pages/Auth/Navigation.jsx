@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   AiOutlineHome,
   AiOutlineLogin,
@@ -12,6 +12,10 @@ import { logout } from "../../redux/features/auth/authSlice";
 const Navigation = () => {
   const { userInfo } = useSelector((state) => state.auth);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    setDropdownOpen(false);
+  }, [userInfo]);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
