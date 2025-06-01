@@ -17,6 +17,10 @@ const Navigation = () => {
     setDropdownOpen(false);
   }, [userInfo]);
 
+  const dropdown = () => {
+    setDropdownOpen(false);
+  };
+
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
@@ -43,6 +47,7 @@ const Navigation = () => {
           <Link
             to="/"
             className="flex items-center text-white transition-all duration-300 hover:translate-x-2"
+            onClick={dropdown}
           >
             <AiOutlineHome className="mr-2" size={26} />
             <span className="hidden sm:block">Home</span>
@@ -99,6 +104,7 @@ const Navigation = () => {
                 <Link
                   to="/profile"
                   className="block px-4 py-2 hover:bg-gray-100 rounded-t-lg"
+                  onClick={dropdown}
                 >
                   Profile
                 </Link>
