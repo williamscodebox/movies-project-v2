@@ -20,8 +20,8 @@ const router = createBrowserRouter(
       <Route index={true} path="/" element={<Home />} />
       {/* <Route path="/" element={<Home />} errorElement={<ErrorPage />} /> */}
       <Route path="/login" element={<Login />} />
-      {/* // <Route path="/register" element={<Register />} />
-      //{" "}
+      <Route path="/register" element={<Register />} />
+      {/*//{" "}
       <Route path="" element={<PrivateRoute />}>
         // <Route path="/profile" element={<Profile />} />
         //{" "}
