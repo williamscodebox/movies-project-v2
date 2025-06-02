@@ -7,8 +7,8 @@ import {
 } from "../../redux/api/genre";
 
 import { toast } from "react-toastify";
-import GenreForm from "../../component/GenreForm";
-import Modal from "../../component/Modal";
+import GenreForm from "../../components/GenreForm";
+import Modal from "../../components/Modal";
 
 const GenreList = () => {
   const { data: genres, refetch } = useFetchGenresQuery();
