@@ -28,7 +28,7 @@ const PORT = process.env.PORT || 3000;
 // Routes
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/genre", genreRoutes);
-// app.use("/api/v1/movies", moviesRoutes);
+app.use("/api/v1/movies", moviesRoutes);
 // app.use("/api/v1/upload", uploadRoutes);
 
 // const __dirname = path.resolve();
