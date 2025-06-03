@@ -90,10 +90,10 @@ const AllMovies = () => {
               </p>
             </div>
 
-            <section className="absolute -bottom-[5rem]">
+            <section className="absolute -bottom-[8rem]">
               <input
                 type="text"
-                className="w-[100%] h-[5rem] border px-10 outline-none rounded"
+                className="w-[100%] h-[3rem] border px-10 outline-none rounded"
                 placeholder="Search Movie"
                 value={moviesFilter.searchTerm}
                 onChange={handleSearchChange}

@@ -4,6 +4,7 @@ import {
   AiOutlineLogin,
   AiOutlineUserAdd,
 } from "react-icons/ai";
+import { MdOutlineLocalMovies } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useLogoutMutation } from "../../redux/api/users";
@@ -52,6 +53,13 @@ const Navigation = () => {
             <AiOutlineHome className="mr-2" size={26} />
             <span className="hidden sm:block">Home</span>
           </Link>
+          {/* <Link
+            to="/movies"
+            className="flex items-center transition-transform transform hover:translate-x-2 ml-[1rem]"
+          >
+            <MdOutlineLocalMovies className="mr-2 mt-[3rem]" size={26} />
+            <span className="hidden nav-item-name mt-[3rem]">SHOP</span>
+          </Link> */}
         </div>
 
         <div className="relative flex items-center">
@@ -99,7 +107,7 @@ const Navigation = () => {
           )}
 
           {dropdownOpen && userInfo && (
-            <ul className="absolute right-0 mt-[7rem] w-48 bg-white text-gray-800 rounded-lg shadow-xl transition-all duration-300 ease-in-out">
+            <ul className="absolute right-0 mt-[9rem] w-48 bg-white text-gray-800 rounded-lg shadow-xl transition-all duration-300 ease-in-out">
               <li>
                 <Link
                   to="/profile"
@@ -109,6 +117,19 @@ const Navigation = () => {
                   Profile
                 </Link>
               </li>
+              {userInfo.isAdmin && (
+                <>
+                  <li>
+                    <Link
+                      to="/admin/movies/dashboard"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                      onClick={dropdown}
+                    >
+                      Dashboard
+                    </Link>
+                  </li>
+                </>
+              )}
               <li>
                 <button
                   onClick={logoutHandler}
