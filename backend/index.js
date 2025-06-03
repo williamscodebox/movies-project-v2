@@ -9,7 +9,7 @@ import path from "path";
 import connectDB from "./config/db.js";
 import userRoutes from "./routes/userRoutes.js";
 import genreRoutes from "./routes/genreRoutes.js";
-// import moviesRoutes from "./routes/moviesRoutes.js";
+import moviesRoutes from "./routes/moviesRoutes.js";
 // import uploadRoutes from "./routes/uploadRoutes.js";
 
 // Configuration
